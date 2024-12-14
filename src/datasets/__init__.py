@@ -1,0 +1,1 @@
+from .weedsgalore.weedsgalore import WeedsGaloreDataset

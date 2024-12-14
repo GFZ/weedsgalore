@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+preferred-citation:
+  title: "WeedsGalore: A Multispectral and Multitemporal UAV-based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields"
+  year: "2025"
+  type: article
+  journal: ""
+  url: https://
+  authors:
+  - family-names: Celikkan
+    given-names: Ekin
+  - family-names: Kunzmann
+    given-names: Timo
+  - family-names: Yeskaliyev
+    given-names: Yertay
+  - family-names: Itzerott
+    given-names: Sibylle
+  - family-names: Klein
+    given-names: Nadja
+  - family-names: Herold
+    given-names: Nartin
