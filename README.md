@@ -6,7 +6,9 @@ This repository contains code and download links for the dataset and pretrained 
 
 [[`arXiv`]()], [[`paper`]()], [[`dataset`](https://doidata.gfz.de/weedsgalore_e_celikkan_2024/)]
 
-
+<a href="/img.png" target="_blank">
+  <img src="/img.png" alt="WeedsGalore Preview" width="800"/>
+</a>
 
 ## Dataset
 ### Download
