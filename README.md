@@ -4,7 +4,7 @@ This is the official implementation of the WACV 2025 paper **WeedsGalore: A Mult
 WeedsGalore is a UAV-based multispectral dataset with dense annotations for crop and weed segmentation in maize fields. 
 This repository contains code and download links for the dataset and pretrained models. 
 
-[[`arXiv`](https://arxiv.org/abs/2502.13103)], [[`paper`](https://arxiv.org/abs/2502.13103)], [[`dataset`](https://doidata.gfz.de/weedsgalore_e_celikkan_2024/)]
+[[`arXiv`](https://arxiv.org/abs/2502.13103)], [[`paper`](https://openaccess.thecvf.com/content/WACV2025/html/Celikkan_WeedsGalore_A_Multispectral_and_Multitemporal_UAV-Based_Dataset_for_Crop_and_WACV_2025_paper.html)], [[`dataset`](https://doidata.gfz.de/weedsgalore_e_celikkan_2024/)]
 
 <a href="/img.png" target="_blank">
   <img src="/img.png" alt="WeedsGalore Preview" width="800"/>
@@ -62,10 +62,15 @@ pip install torchmetrics==0.11.4
 
 Run the evaluation script, replacing the flags with your paths and parameters:
 ```
-src/evaluate.py --dataset_path <weedsgalore-dataset_directory> --split test --ckpt <ckpt_directory> --in_channels 5 --num_classes 6
+python src/evaluate.py --dataset_path <weedsgalore-dataset_directory> --split test --ckpt <ckpt_directory> --in_channels 5 --num_classes 6
 ```
 
-You can download pretrained models for DeepLabv3+ [here](https://doidata.gfz.de/weedsgalore_e_celikkan_2024/ckpts.zip) (for both MSI and RGB input, and uni-weed and multi-weed case).
+Inference with probabilistic model:
+```
+python src/evaluate_vimc.py --dataset_path <weedsgalore-dataset_directory> --split test --ckpt <ckpt_directory> --in_channels 5 --num_classes 3 --mc_samples=5
+```
+
+You can download pretrained models for DeepLabv3+ [here](https://doidata.gfz.de/weedsgalore_e_celikkan_2024/ckpts.zip) (for both MSI and RGB input, uni-weed and multi-weed case, deterministic and probabilistic variants).
 
 ## License
 This project is licensed under the Apache-2.0 License. See LICENSES folder for details. 
@@ -92,12 +97,12 @@ This project is licensed under the Apache-2.0 License. See LICENSES folder for d
 If you use the dataset or code, please cite our paper:
 
 ```
-@misc{celikkan2025weedsgalore,
-      title={WeedsGalore: A Multispectral and Multitemporal UAV-based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields}, 
-      author={Ekin Celikkan and Timo Kunzmann and Yertay Yeskaliyev and Sibylle Itzerott and Nadja Klein and Martin Herold},
-      year={2025},
-      eprint={2502.13103},
-      archivePrefix={arXiv},
-      url={https://arxiv.org/abs/2502.13103}, 
+@InProceedings{Celikkan_2025_WACV,
+    author    = {Celikkan, Ekin and Kunzmann, Timo and Yeskaliyev, Yertay and Itzerott, Sibylle and Klein, Nadja and Herold, Martin},
+    title     = {WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields},
+    booktitle = {Proceedings of the Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {February},
+    year      = {2025},
+    pages     = {4767-4777}
 }
 ```

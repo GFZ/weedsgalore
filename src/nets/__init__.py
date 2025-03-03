@@ -1,1 +1,2 @@
 from .deeplabv3plus.modeling import deeplabv3plus_resnet50
+from .deeplabv3plus_do.modeling import deeplabv3plus_resnet50_do
