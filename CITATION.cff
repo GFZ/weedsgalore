@@ -1,10 +1,9 @@
 cff-version: 1.2.0
 preferred-citation:
-  title: "WeedsGalore: A Multispectral and Multitemporal UAV-based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields"
+  title: "WeedsGalore: A Multispectral and Multitemporal UAV-Based Dataset for Crop and Weed Segmentation in Agricultural Maize Fields"
   year: "2025"
   type: article
-  journal: ""
-  url: https://
+  journal: "Proceedings of the Winter Conference on Applications of Computer Vision (WACV)"
   authors:
   - family-names: Celikkan
     given-names: Ekin

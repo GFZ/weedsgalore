@@ -17,7 +17,7 @@ flags.DEFINE_string('dataset_path', '/weedsgalore-dataset', 'dataset directory')
 flags.DEFINE_string('split', 'test', 'Options: val, test')
 
 flags.DEFINE_string('network', 'deeplabv3plus', 'options: deeplabv3plus')
-flags.DEFINE_string('ckpt', '/ckpt_36_730.pth', 'checkpoint directory')
+flags.DEFINE_string('ckpt', '/dlv3p_msi_6.pth', 'checkpoint directory')
 
 flags.DEFINE_integer('in_channels', 5, 'options: 3 (RGB), 5 (MSI)')
 flags.DEFINE_integer('num_classes', 6, 'options: 3 (uni-weed), 6 (multi-weed)')
@@ -76,9 +76,6 @@ def main(_):
 
         with torch.no_grad():
             out = net(features)
-
-        if FLAGS.network == 'deeplabv3':
-            out = out['out']
 
         out = torch.nn.functional.softmax(out, dim=1)
 
