@@ -41,18 +41,12 @@ Please refer to the [full licence text](https://doidata.gfz.de/weedsgalore_e_cel
 ## Evaluation
 
 ### Requirements
-Make sure to have the following installed:
-
-- **Python**:`>= 3.7`
-- **PyTorch**:`>= 1.13.0`
-- **torchmetrics**: `>= 0.11.0`
-- **absl**: `>= 1.3.0`
-- **Pillow (PIL)**: `>= 9.0.1`
+Make sure to have the necessary dependencies installed. They are listed in `requirements.txt`.
 
 ### Install Packages
 Example: Create a conda environment and install dependencies:
 ```
-conda create -n weedsgalore python=3.7.12
+conda create -n weedsgalore python=3.7.12 -c conda-forge
 conda activate weedsgalore
 conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 conda install absl-py=1.3.0

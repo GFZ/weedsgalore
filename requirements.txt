@@ -1,0 +1,6 @@
+Python>=3.7
+pytorch==1.13.1
+torchvision==0.14.1
+torchmetrics==0.11.4
+absl==1.3.0
+pillow==9.0.1
