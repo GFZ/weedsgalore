@@ -28,8 +28,8 @@ model_urls = {
 }
 
 
-def load_state_dict_from_local(checkpoints_dir):
-  state_dict = torch.load(checkpoints_dir + '/resnet50-19c8e357.pth')
+def load_state_dict_from_local(ckpt_resnet):
+  state_dict = torch.load(ckpt_resnet)
   return state_dict
 
 
@@ -239,7 +239,7 @@ def _resnet(arch, block, layers, pretrained, progress, **kwargs):
   model = ResNet(block, layers, **kwargs)
   if pretrained:
     #state_dict = load_state_dict_from_url(model_urls[arch], progress=progress)
-    state_dict = load_state_dict_from_local(FLAGS.checkpoints_dir)
+    state_dict = load_state_dict_from_local(FLAGS.ckpt_resnet)
     model.load_state_dict(state_dict)
   return model
 

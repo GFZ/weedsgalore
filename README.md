@@ -66,6 +66,12 @@ python src/evaluate_vimc.py --dataset_path <weedsgalore-dataset_directory> --spl
 
 You can download pretrained models for DeepLabv3+ [here](https://doidata.gfz.de/weedsgalore_e_celikkan_2024/ckpts.zip) (for both MSI and RGB input, uni-weed and multi-weed case, deterministic and probabilistic variants).
 
+## Training
+Run the training script, replacing the flags with your paths and parameters (set `dlv3p_do=True` to run the probabilistic variant):
+```
+python src/train.py --dataset_path <weedsgalore-dataset_directory> --dataset_size_train 104 --in_channels 5 --num_classes 3 --dlv3p_do True --pretrained_backbone True --ckpt_resnet <path-to-backbone-weights> --batch_size 8 --num_workers 4 --lr 0.001 --epochs 100 --out_dir <output_directory> --log_interval 25 --ckpt_interval 100
+```
+
 ## License
 This project is licensed under the Apache-2.0 License. See LICENSES folder for details. 
 ```
